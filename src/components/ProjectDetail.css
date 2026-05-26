@@ -1,0 +1,277 @@
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Main Section Container */
+.animated-project-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated-project-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.project-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.project-status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.project-hero-image {
+  height: 800px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Sections */
+.project-section {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+.project-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Tech Stack */
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.tech-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: #3498db;
+  border: 2px solid #3498db;
+  transition: all 0.2s ease;
+  will-change: auto;
+}
+
+.tech-item:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+/* Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+  will-change: auto;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Challenges */
+.challenges-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.challenge-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #e67e22;
+  transition: all 0.2s ease;
+  will-change: auto;
+}
+
+.challenge-card:hover {
+  box-shadow: 0 8px 24px rgba(230, 126, 34, 0.15);
+  transform: translateX(4px);
+}
+
+.challenge-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Results */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.result-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+  will-change: auto;
+}
+
+.result-item:hover {
+  background: #f0f7ff;
+  border-color: #3498db;
+}
+
+.result-item svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.result-item p {
+  font-size: 0.95rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-section-title {
+    font-size: 1.5rem;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-project-section {
+    padding: 3rem 1rem;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-section-title {
+    font-size: 1.25rem;
+  }
+
+  .feature-card,
+  .challenge-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .result-item {
+    padding: 1rem;
+  }
+}
