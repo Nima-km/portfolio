@@ -68,9 +68,13 @@
 }
 
 .project-hero-image {
-  height: 800px;
+  height: 900px;
   border-radius: 12px;
   display: flex;
+  position: relative;
+  aspect-ratio: 9 / 19.5; 
+  min-height: 800;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);

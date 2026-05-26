@@ -124,8 +124,7 @@ const ProjectDetail = memo(function ProjectDetail({
 							<Image
 								src={project.image}
 								alt={""}
-								height={800}
-								width={380}
+								fill
 								unoptimized
 							/>
 						)}
